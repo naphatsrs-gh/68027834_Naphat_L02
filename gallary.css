@@ -1,0 +1,18 @@
+/* gallary.css */
+
+img {
+    width: 100%;             /* ให้รูปขยายเต็มพื้นที่คอลัมน์ [cite: 344] */
+    aspect-ratio: 1 / 1;    /* บังคับรูปเป็นทรงจัตุรัสเพื่อให้เรียงกันสวยเหมือนตัวอย่าง */
+    object-fit: cover;       /* ตัดส่วนเกินเพื่อให้รูปเต็มกรอบสวยงาม [cite: 344] */
+    border-radius: 20px;     /* ขอบมนตามโจทย์ [cite: 344] */
+    opacity: 0.5;            /* ความโปร่งใสเริ่มต้น [cite: 344] */
+    transition: transform 0.8s, opacity 0.5s; /* หน่วงเวลาตอนขยายและปรับความโปร่งใส */
+    border: 2px solid transparent; /* สำรองพื้นที่ขอบเพื่อไม่ให้เลย์เอาต์ขยับเมื่อ Hover */
+}
+
+img:hover {
+    opacity: 1;              /* เมื่อเมาส์วางจะชัดขึ้น [cite: 353] */
+    transform: scale(1.1);   /* ขยายขึ้นเล็กน้อย [cite: 354] */
+    border: 2px solid #007bff; /* เพิ่มเส้นขอบสีน้ำเงิน */
+    cursor: pointer;
+}
